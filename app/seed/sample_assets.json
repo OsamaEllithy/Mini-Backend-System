@@ -1,0 +1,64 @@
+{
+  "assets": [
+    {
+      "type": "domain",
+      "value": "example.com",
+      "source": "manual",
+      "tags": ["prod", "primary"],
+      "metadata": {
+        "registrar": "Namecheap",
+        "owner": "IT Dept"
+      }
+    },
+    {
+      "type": "subdomain",
+      "value": "api.example.com",
+      "source": "amass",
+      "tags": ["prod", "api"],
+      "metadata": {
+        "cname": "alb-123.aws.com"
+      }
+    },
+    {
+      "type": "ip_address",
+      "value": "192.168.1.100",
+      "source": "shodan",
+      "tags": ["prod", "aws"],
+      "metadata": {
+        "region": "us-east-1",
+        "asn": "AS14618"
+      }
+    },
+    {
+      "type": "service",
+      "value": "192.168.1.100:443",
+      "source": "nmap",
+      "tags": ["web", "https"],
+      "metadata": {
+        "protocol": "tcp",
+        "state": "open"
+      }
+    },
+    {
+      "type": "certificate",
+      "value": "sha256:abcd1234efgh5678",
+      "source": "censys",
+      "tags": ["ssl"],
+      "metadata": {
+        "issuer": "Let's Encrypt",
+        "expires_at": "2026-12-31T23:59:59Z",
+        "valid": true
+      }
+    },
+    {
+      "type": "technology",
+      "value": "nginx:1.24.0",
+      "source": "wappalyzer",
+      "tags": ["webserver"],
+      "metadata": {
+        "category": "Web Servers",
+        "cpe": "cpe:/a:nginx:nginx:1.24.0"
+      }
+    }
+  ]
+}
